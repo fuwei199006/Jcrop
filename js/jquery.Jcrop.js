@@ -228,10 +228,10 @@
     function newSelection(e) //{{{
     {
       if (options.disabled) {
-        return;
+        return false;
       }
       if (!options.allowSelect) {
-        return;
+        return false;
       }
       btndown = true;
       docOffset = getPos($img);
@@ -1437,11 +1437,11 @@
       disableCrop();
       var img = new Image();
       img.onload = function () {
-        var iw = img.width;
-        var ih = img.height;
+        //var iw = img.width;
+        //var ih = img.height;
         var bw = options.boxWidth;
         var bh = options.boxHeight;
-        $img.width(iw).height(ih);
+        //$img.width(iw).height(ih);
         $img.attr('src', src);
         $img2.attr('src', src);
         presize($img, bw, bh);
